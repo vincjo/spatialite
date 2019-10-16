@@ -11,7 +11,7 @@ A geometry-valued SQL column is implemented as a column that has a geometry type
 # Tests
 ```./vendor/bin/phpunit tests``` -->
 
-# Usage
+# Basic usage
 Create a new empty DB :
 ~~~php
 use Spatialite\SPL;
