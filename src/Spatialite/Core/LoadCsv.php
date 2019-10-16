@@ -10,7 +10,6 @@ class LoadCsv extends SPL
     private $filepath;
     private $tablename;
     private $separator;
-    private $command;
 
     public function __construct(string $db, string $filepath, string $tablename, string $separator)
     {
