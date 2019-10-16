@@ -25,7 +25,7 @@ $db->loadShapefile('path/to/shapefile/commune', 'commune', [
 Query :
 ~~~php
 $result = $db->query("
-    SELECT numero, nom_acc, statut, AsText(Centroid(geom)) 
+    SELECT numero, nom_acc, statut, AsText( ST_Centroid(geom) ) AS centroid
     FROM commune 
     LIMIT 3
 ")->fetchAll(SPL::FETCH_OBJ);
