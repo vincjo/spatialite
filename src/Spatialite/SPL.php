@@ -103,7 +103,7 @@ class SPL implements SpatialiteInterface
 	}
 
 	/**
-	 * @param 	string 	$file 		path to SQL file
+	 * @param 	string 	$filepath 	path to SQL file
 	 * @param 	bool 	$spatial	true if SQL script includes spatial function
 	 */
 	public function runSqlScript($filepath, $spatial = false)
