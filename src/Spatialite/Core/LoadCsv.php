@@ -21,7 +21,7 @@ class LoadCsv extends SPL
 
     public function process()
     {
-        $process = new Process([$this->bin->spatialite, $this->db, '.mode csv', '.separator ' . $this->separator, '.import ' . $this->pathfile . ' ' . $tablename]);
+        $process = new Process([$this->bin->sqlite3, $this->db, '.mode csv', '.separator ' . $this->separator, '.import ' . $this->pathfile . ' ' . $tablename]);
 		$process->run();
 		if (!$process->isSuccessful()) {
 			throw new ProcessFailedException($process);
