@@ -29,6 +29,35 @@ $result = $db->query("
     FROM commune 
     LIMIT 3
 ")->fetchAll(SPL::FETCH_OBJ);
+
+// output :
+Array
+(
+    [0] => stdClass Object
+        (
+            [numero] => 71176
+            [nom_acc] => Digoin
+            [statut] => Chef-lieu de canton
+            [centroid] => POINT(778668.545898 6599300.563594)
+        )
+
+    [1] => stdClass Object
+        (
+            [numero] => 71590
+            [nom_acc] => Volesvres
+            [statut] => Commune simple
+            [centroid] => POINT(789596.3737 6597690.519251)
+        )
+
+    [2] => stdClass Object
+        (
+            [numero] => 71325
+            [nom_acc] => La Motte-Saint-Jean
+            [statut] => Commune simple
+            [centroid] => POINT(773591.803208 6602067.726544)
+        )
+
+)
 ~~~
 Dump shapefile :
 ~~~php
