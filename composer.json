@@ -1,0 +1,40 @@
+{
+  "name": "vincjo/spatialite",
+  "description": "Sqlite and spatialite static binaries",
+  "keywords": [
+    "sqlite",
+    "sqlite3",
+    "spatialite",
+    "static"
+  ],
+  "type": "library",
+  "license": "LGPL-2.1",
+  "authors": [
+    {
+      "name": "Vincent Joseph",
+      "email": "v.joseph3@gmail.com",
+      "homepage": "https://github.com/vincjo"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "symfony/process": "^4.3"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "bin": [
+    "bin/win/spatialite.exe",
+    "bin/win/sqlite3.exe",
+    "bin/linux/spatialite",
+    "bin/linux/sqlite3"
+  ],
+  "autoload": {
+    "psr-4": {
+        "Spatialite\\": "src/Spatialite/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "8"
+  }
+}
