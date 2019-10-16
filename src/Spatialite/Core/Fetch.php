@@ -2,8 +2,6 @@
 namespace Spatialite\Core;
 
 use \Spatialite\SPL;
-use Symfony\Component\Process\Exception\ProcessFailedException;
-use Symfony\Component\Process\Process;
 
 class Fetch extends SPL
 {

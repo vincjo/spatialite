@@ -12,8 +12,6 @@ use \Spatialite\Core\{
 	DumpCsv,
 	RunSqlScript
 };
-use Symfony\Component\Process\Exception\ProcessFailedException;
-use Symfony\Component\Process\Process;
 
 class SPL implements SpatialiteInterface
 {

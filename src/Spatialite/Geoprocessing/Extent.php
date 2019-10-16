@@ -9,7 +9,7 @@ class Extent extends SPL
 
     public function __construct(array $extent)
     {
-        parent::__construct(__DIR__ . "/../bin/db.sqlite");
+        parent::__construct(__DIR__ . "/../../../bin/db.sqlite");
         $this->extent = $extent;
     }
 
