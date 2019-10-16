@@ -1,6 +1,6 @@
 {
   "name": "vincjo/spatialite",
-  "description": "Sqlite and spatialite static binaries",
+  "description": "PHP spatialite",
   "keywords": [
     "sqlite",
     "sqlite3",
