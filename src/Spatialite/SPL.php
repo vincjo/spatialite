@@ -55,14 +55,14 @@ class SPL implements SpatialiteInterface
 
     /**
 	 * Create new table from Shapefile.
-	 * @param string  $filepath 				REQUIRED: Path to the Shapefile (without any extension)
-	 * @param string  $tablename 				REQUIRED: Tablename in the Spatialite database
-	 * @param string  $options['charset']		DEFAULT: 'UTF-8' 	Encoding file (UTF-8, CP1252...)
-	 * @param integer $options['srid']	 		DEFAULT: 3857		EPSG - coordinate system code (3857, 4326, 2154 ...)
-	 * @param string  $options['geomcolumn']  	DEFAULT: 'geom' 	Geometry column name
-	 * @param string  $options['displayfield']	DEFAULT: 'PK_UID' 	Primary key (If it does not exist, specify a column name to do self-increment)
-	 * @param string  $options['geomtype']		DEFAULT: 'AUTO' 	Geometry type (LINESTRING, POLYGON, POINT, MULTILINESTRING, MULTIPOLYGON, MULTIPOINT)
-	 * @param string  $options['dimension']		DEFAULT: '2d' 		2d, 3d (default 2d)
+	 * @param string  $filepath 			REQUIRED: Path to the Shapefile (without any extension)
+	 * @param string  $tablename 			REQUIRED: Tablename in the Spatialite database
+	 * @param string  $options['charset']		DEFAULT: 'UTF-8' Encoding file (UTF-8, CP1252...)
+	 * @param integer $options['srid']	 	DEFAULT: 3857	EPSG - coordinate system code (3857, 4326, 2154 ...)
+	 * @param string  $options['geomcolumn']  	DEFAULT: 'geom' Geometry column name
+	 * @param string  $options['displayfield']	DEFAULT: 'PK_UID' Primary key (If it does not exist, specify a column name to do self-increment)
+	 * @param string  $options['geomtype']		DEFAULT: 'AUTO' Geometry type (LINESTRING, POLYGON, POINT, MULTILINESTRING, MULTIPOLYGON, MULTIPOINT)
+	 * @param string  $options['dimension']		DEFAULT: '2d' 	2d, 3d (default 2d)
 	 * @param string  $options['compressed']	DEFAULT: 'compressed'
 	 */
 	public function loadShapefile(string $filepath, string $tablename, array $options = [])
@@ -72,10 +72,10 @@ class SPL implements SpatialiteInterface
 
 	/**
 	 * Create Shapefile from table.
-	 * @param string  $filepath 				REQUIRED: Path to the Shapefile (without any extension)
-	 * @param string  $tablename 				REQUIRED: Tablename in the Spatialite database
-	 * @param string  $options['charset']		DEFAULT: 'UTF-8' 	Encoding file (UTF-8, CP1252...)
-	 * @param string  $options['geomcolumn']  	DEFAULT: 'geom' 	Geometry column name
+	 * @param string  $filepath 			REQUIRED: Path to the Shapefile (without any extension)
+	 * @param string  $tablename 			REQUIRED: Tablename in the Spatialite database
+	 * @param string  $options['charset']		DEFAULT: 'UTF-8' Encoding file (UTF-8, CP1252...)
+	 * @param string  $options['geomcolumn']  	DEFAULT: 'geom' Geometry column name
 	 */
 	public function dumpShapefile(string $filepath, string $tablename, array $options = [])
 	{
