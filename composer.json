@@ -1,11 +1,11 @@
 {
   "name": "vincjo/spatialite",
-  "description": "PHP spatialite",
+  "description": "PHP + Spatialite",
   "keywords": [
     "sqlite",
     "sqlite3",
     "spatialite",
-    "static"
+    "php"
   ],
   "type": "library",
   "license": "LGPL-2.1",
