@@ -10,9 +10,8 @@ Create a new empty DB :
 use Spatialite\SPL;
 
 $db = new SPL( SPL::CreateNewEmptyDB('test.sqlite') );
-~~~
-...Or connect an existing Spatialite DB :
-~~~php
+
+// Or connect an existing Spatialite DB :
 $db = new SPL( 'path/to/mydb.sqlite' );
 ~~~
 Load shapfile :
