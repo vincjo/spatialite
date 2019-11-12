@@ -52,6 +52,17 @@ class LoadShapefile extends SPL
 
     public function execute()
     {
+        $process = new Process(['spatialite', $this->db, $this->command]);
+		$process->run();
+		if (!$process->isSuccessful()) {
+			throw new ProcessFailedException($process);
+        }
+        $this->output = $process->getOutput();
+		return $this;  
+    }
+    
+    public function executeOld()
+    {
         $process = new Process([$this->bin->spatialite, $this->db, $this->command]);
 		$process->run();
 		if (!$process->isSuccessful()) {
