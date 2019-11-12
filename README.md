@@ -1,5 +1,5 @@
 # Install
-> Note that you have to install sqlite3 / mod_spatialite and spatialite to run this library.
+> Note that you have to install first sqlite3 / mod_spatialite and spatialite to run this library.
 
 ```composer require vincjo/spatialite```
 
