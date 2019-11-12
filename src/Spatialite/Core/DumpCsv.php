@@ -13,7 +13,7 @@ class DumpCsv extends SPL
     public function __construct(string $db, string $filepath, string $query)
     {
         parent::__construct($db);
-        $this->filepath = $filepath;
+        $this->filepath = str_replace( '\\', '/', $filepath );
         $this->query = $query;
     }
 

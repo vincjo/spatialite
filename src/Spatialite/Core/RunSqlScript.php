@@ -14,7 +14,7 @@ class RunSqlScript extends SPL
     public function __construct(string $db, string $filepath, bool $spatial)
     {
         parent::__construct($db);
-        $this->filepath = $filepath;
+        $this->filepath = str_replace( '\\', '/', $filepath );
         $this->spatial = $spatial;
     }
 

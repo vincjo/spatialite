@@ -14,7 +14,7 @@ class LoadCsv extends SPL
     public function __construct(string $db, string $filepath, string $tablename, string $separator)
     {
         parent::__construct($db);
-        $this->filepath = $filepath;
+        $this->filepath = str_replace( '\\', '/', $filepath );
         $this->tablename = $tablename;
         $this->separator = $separator;
     }
