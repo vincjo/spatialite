@@ -1,7 +1,7 @@
 <?php
 namespace Spatialite;
 
-use \Spatialite\Core\{
+use \Spatialite\SPL\{
 	Query,
 	FetchAll,
 	Fetch,
@@ -122,17 +122,18 @@ class SPL implements SpatialiteInterface
 		return false;
 	}
 
+	public function setPath(array $paths)
+	{
+		$this->bin->spatialite = $paths['spatialite'];
+		$this->bin->sqlite3 = $paths['sqlite3'];
+		return $this;
+	}
+
 	private function getBinaries()
 	{
-		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-			$folder = 'win';
-		} else {
-			$folder = 'linux';
-		}	
 		return (object) [
-			"OS" => PHP_OS,
-			"spatialite" => __DIR__ . "/../../bin/$folder/spatialite",
-			"sqlite3" => __DIR__ . "/../../bin/$folder/sqlite3"
+			'spatialite' => 'spatialite',
+			'sqlite3' => 'sqlite3'
 		];
 	}
 }
