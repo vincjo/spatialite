@@ -25,9 +25,9 @@ class Extent extends SPL
 			)
 		");
 		return [
-			"width" => $width,
-            "length" => $length,
-            "ratio" => $width / $length,
+			"width" => floatval($width),
+            "length" => floatval($length),
+            "ratio" => floatval($width) / floatval($length),
             "bbox" => $this->toString()
         ];
     }
