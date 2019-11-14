@@ -36,11 +36,16 @@ class Fetch extends SPL
             $val = isset(explode(" = ", $value)[1]) ? trim(explode(" = ", $value)[1]) : '';
             if ($key !== '') $values[$key] = $val;
         }
-        if ($this->type === 'array') {
+        if (!$value) {
+            $row = null;
+        }
+        elseif ($this->type === 'array') {
             $row = $values;
-        } elseif ($this->type === 'object') {
+        } 
+        elseif ($this->type === 'object') {
             $row = (object) $values;
-        } else {
+        } 
+        else {
             $row = [
                 "FETCH_ASSOC" => $values,
                 "FETCH_OBJ" => (object) $values,
