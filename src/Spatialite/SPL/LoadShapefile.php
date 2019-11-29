@@ -15,7 +15,7 @@ class LoadShapefile extends SPL
     public function __construct(string $db, string $filepath, string $tablename, array $options)
     {
         parent::__construct($db);
-        $this->filepath = str_replace( '\\', '/', $filepath );
+        $this->filepath = $file = str_replace(['.shp', '.shx', '.dbf', '.cpg', '.prj', '.qpj'], '', str_replace( '\\', '/', $filepath ) );
         $this->tablename = $tablename;
         $this->options = $options;
     }
